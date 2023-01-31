@@ -13,9 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: Scaffold(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: Center(child: Text('Dicee Project')),
+          backgroundColor: Colors.red,
         ),
         body: DiceePage(),
       ),
@@ -28,14 +29,17 @@ class DiceePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        children: [
-          Image(
-            image: AssetImage('images/1.png'),
-          ),
-        ],
-      ),
+    return Row(
+      children: [
+        Expanded(
+          flex: 1,
+          child: Image.asset('images/dice-six-faces-one.png'),
+        ),
+        Expanded(
+          flex: 1,
+          child: Image.asset('images/dice-six-faces-six.png'),
+        ),
+      ],
     );
   }
 }

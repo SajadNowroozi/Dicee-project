@@ -11,13 +11,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        home: Scaffold(
-          backgroundColor: Colors.red,
-          appBar: AppBar(
-            title: Center(child: Text('Dicee Project')),
-          ),
-        ));
+      title: 'Flutter Demo',
+      home: Scaffold(
+        backgroundColor: Colors.red,
+        appBar: AppBar(
+          title: Center(child: Text('Dicee Project')),
+        ),
+        body: DiceePage(),
+      ),
+    );
   }
 }
 
@@ -29,11 +31,8 @@ class DiceePage extends StatelessWidget {
     return Center(
       child: Row(
         children: [
-          Expanded(
-            child: FlatButton(
-              onPressed: (){},
-              child: Image.asset('images/1.PNG'),
-            ),
+          Image(
+            image: AssetImage('images/1.png'),
           ),
         ],
       ),
